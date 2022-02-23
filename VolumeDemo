@@ -11,7 +11,7 @@ spec:
    volumeMounts:
     - mountPath: /tmp/files
       name: app-storage 
-   volumes:
+ volumes:
   - name: app-storage 
     hostPath:
     path: /data
