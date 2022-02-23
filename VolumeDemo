@@ -15,7 +15,6 @@ spec:
   - name: app-storage 
     hostPath:
     path: /data
-    type: DirectoryOrCreate
  - name: app2
    image: yanivomc/spring-music:latest
    ports: 
@@ -27,4 +26,3 @@ spec:
     - name: app-storage
     hostPath:
     path: /data
-    type: DirectoryOrCreate
