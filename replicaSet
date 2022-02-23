@@ -20,6 +20,8 @@ spec:
       containers:
       - name: app1
       image: supergiantkir/animals:bear
+      ports:
+      - containerPort: 8080
       volumeMounts:
       - name: app-storage
       mountPath: /tmp/files
