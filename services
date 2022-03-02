@@ -3,9 +3,9 @@ apiVersion: v1
 metadata:
   name: my-service # Name of the service
 spec:
-        #  type: LoadBalancer
+  type: LoadBalancer
   selector:
-    app: nginx    # Run on any pod(s) with label - app: myapp
+    app: spring-music    # Run on any pod(s) with label - app: myapp
   ports:          # Map incoming port to target port
   - name: http    # Setting multiple ports listterns
     protocol: TCP
