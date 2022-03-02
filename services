@@ -1,7 +1,7 @@
 kind: Service      # Create new service
 apiVersion: v1
 metadata:
-  name: ssangal-svc # Name of the service
+  name: mysvc # Name of the service
 spec:
   type: LoadBalancer
   selector:
