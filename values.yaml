@@ -1,0 +1,14 @@
+name: "mydep"
+containers:
+        repo: "yanivomc"
+        image: "spring-music"
+        tag: "latest"
+        port: 8080
+databaseProd:
+        dbname: mydb
+        dbtable: music
+databaseTest:
+        dbname: db_mysql-test
+        dbtable: music
+pods:
+ image: yanivomc/spring-music
