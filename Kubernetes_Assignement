@@ -1,0 +1,23 @@
+Deleting any pod: as Replicaset is running, new pod get created. It can be seen in the https:// link also and by kubectl get all.
+Deleting Result pod : Gets created and keeps working. 
+Deleting vote pod : Gets re-created and keeps working
+Deleting db pod:
+
+kubectl delete pod db-b54cd94f4-pp78d
+pod "db-b54cd94f4-pp78d" deleted
+[root@ip-172-31-3-203 k8s-specifications]# kubectl get all
+NAME                          READY   STATUS    RESTARTS   AGE
+pod/db-b54cd94f4-tnbjm        1/1     Running   0          43s
+
+==> New db pod is created.but vote/result does not show the update. hence effectively, it does not work.
+
+==> delete vote pod and it will be created.
+
+==> Delete Result pod and it will be created automaically by RS.
+
+==> Now it is working fine again. db pod is synched with vote/result pod
+
+
+RESULT:  If db pod is deleted, need to delete vote/result pod so that it will sync again.
+
+SAME IS TRUE IF WORKER POD IS DELETED TOO. IF WORKER POD IS DELETED, NEED TO START VOTE/RESULT POD TO MAKE IT WORK. 
